@@ -1,0 +1,199 @@
+.single-page-con {
+    background: #f9f9f9 !important;
+}
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-size: 12px;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-size: 12px;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-size: 12px;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-size: 12 px;
+}
+.borrowBooksPar{
+    box-shadow: 2px 2px 9px 1px #888880;
+    .flex {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+    }
+    
+    .average(@column, @gap) {
+        /*关键代码*/
+        -moz-column-count: @column;
+        -webkit-column-count: @column;
+        column-count: @column;
+        -moz-column-gap: @gap;
+        -webkit-column-gap: @gap;
+        column-gap: @gap;
+    }
+    
+    .inside() {
+        /*关键代码*/
+        -moz-page-break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .borrowBooks {
+        background: #ffffff;
+        cursor: pointer;
+        border: 1px solid #e8e8e8;
+        
+        margin: 0 auto;
+        width:100%;
+        padding: 20px;
+        position: relative;
+        margin-bottom: 100px;
+        h3 {
+            padding: 12px;
+        }
+        .userName {
+            .average(4, "12px");
+            div {
+                .inside();
+                padding: 3px 0;
+            }
+        }
+        .red {
+            color: red;
+        }
+        .inputName {
+            cursor: pointer;
+            padding: 20px 0;
+            border-top: 1px solid #dddddd;
+            .flex;
+            input {
+                cursor: pointer;
+                padding: 5px 3px;
+                padding-left: 8px;
+                position: relative;
+                top: -3px;
+                border: 1px solid #dddddd;
+                border-radius: 5px;
+                font-size: 14px;
+                width: 220px;
+            }
+        }
+        fieldset {
+            cursor: pointer;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            legend {
+                margin-left: 20px;
+                color: #999999;
+                font-size: 12px;
+                padding: 0 10px;
+            }
+            article {
+                padding: 16px;
+            }
+        }
+        .address_border {
+            width: 102%;
+            margin-left: -19px;
+            padding-bottom: 16px;
+            background: #fff url("../img/boder.png") -7px bottom repeat-x;
+            background-size: 64px 5px;
+            padding: 30px 10px;
+            padding-right: 16px;
+            position: relative;
+            font-size: 14px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        .startBook {
+            margin-top: 20px;
+            position: relative;
+            section {
+                border: none;
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                border: 1px solid #dddddd;
+                border-radius: 5px;
+                margin: 0 12px;
+            }
+            code {
+                font-size: 16px;
+                color: #000000;
+                font-weight: bold;
+                cursor: pointer;
+                display: block;
+                margin-top: 12px;
+            }
+            span {
+                display: block;
+                cursor: pointer;
+                margin-top: 5px;
+            }
+            button {
+                width: 154px;
+                height: 45px;
+                line-height: 42px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                border: 1px solid #dddddd;
+                font-size: 16px;
+                background: #1aad19;
+                color: #ffffff;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            fieldset {
+                padding: 5px;
+                padding-bottom: 80px;
+                
+            }
+        }
+        .bookName {
+            button {
+                width: 101px;
+                height: 32px;
+                position: inherit;
+                line-height: 32px;
+                right: 0;
+                bottom: 0;
+                border: 1px solid #dddddd;
+                font-size: 16px;
+                background: #1aad19;
+                color: #ffffff;
+                border-radius: 3px;
+                cursor: pointer;
+                margin-top: -3px;
+                margin-left: 10px;
+            }
+        }
+        .hide {
+            display: none;
+        }
+    }
+}
+
+ /*滚动条样式*/
+::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 2px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 2px;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}

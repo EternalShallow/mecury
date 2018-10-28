@@ -1,0 +1,145 @@
+@import url('../../../../assets/css/config');
+body,
+html {
+    margin: 0;
+    height:auto !important;
+}
+
+* {
+    opacity: 1;
+    -webkit-backface-visibility: hidden;
+}
+
+.tabItems {
+    .Tab_tittle_wrap {
+        top: 0;
+        z-index: 2;
+        background: @ffffff;
+        display: -webkit-box;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: @222222;
+        border-bottom: 1px solid rgba(46, 177, 255, 0.08);
+        box-shadow: 0px 0px 25px 6px rgba(46, 177, 255, 0.21);
+        span {
+            display: block;
+            text-align: center;
+            width: 26%;
+            margin: 0 24px;
+            font-size: 14px;
+            position: relative;
+            i {
+                display: inline-block;
+                position: absolute;
+                width: 1px;
+                height: 15px;
+                top: 15px;
+                right: -24px;
+                background: @dddddd;
+            }
+            &:last-child {
+                i {
+                    display: none;
+                }
+            }
+        }
+        .router-link-active {
+            color: #8097f9;
+            border-bottom: 1px solid #8097f9;
+        }
+    }
+    .Tab_item_wrap {
+        width: 100%;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        z-index: 0;
+        bottom: 0;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .showAnminous{
+        opacity: 1;
+        -webkit-backface-visibility: hidden;
+        
+        /*动画名称，需要跟@keyframes定义的名称一致*/
+        -webkit-animation-duration: .3s;
+        /*动画持续的时间长*/
+        -webkit-animation-iteration-count: 1;
+        /*动画循环播放的次数为1 infinite为无限次*/
+    }
+    .showAnminous-right {
+        /*-webkit-animation-name: "rightMove";*/
+        .showAnminous;
+    }
+    .showAnminous-left {
+        /*-webkit-animation-name: "leftMove";*/
+        .showAnminous;
+    }
+}
+
+@-webkit-keyframes rightMove {
+    0% {
+        -webkit-transform: translate(110%, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+
+@-ms-keyframes rightMove {
+    0% {
+        -ms-transform: translate(110%, 0);
+    }
+    100% {
+        -ms-transform: translate(0, 0);
+    }
+}
+
+@keyframes rightMove {
+    0% {
+        -webkit-transform: translate(110%, 0);
+        -ms-transform: translate(110%, 0);
+        transform: translate(110%, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+
+
+
+@-webkit-keyframes leftMove {
+    0% {
+        -webkit-transform: translate(-110%, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+
+@-ms-keyframes leftMove {
+    0% {
+        -ms-transform: translate(-110%, 0);
+    }
+    100% {
+        -ms-transform: translate(0, 0);
+    }
+}
+
+@keyframes leftMove {
+    0% {
+        -webkit-transform: translate(-110%, 0);
+        -ms-transform: translate(-110%, 0);
+        transform: translate(-110%, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}

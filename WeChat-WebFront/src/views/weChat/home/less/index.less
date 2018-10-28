@@ -1,0 +1,186 @@
+.average(@column, @gap) {
+    /*关键代码*/
+    -moz-column-count: @column;
+    -webkit-column-count: @column;
+    column-count: @column;
+    -moz-column-gap: @gap;
+    -webkit-column-gap: @gap;
+    column-gap: @gap;
+}
+
+.inside() {
+    /*关键代码*/
+    -moz-page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.home {
+    margin: 0 auto;
+    width: 100%;
+    .ageStage {
+      background: #ffffff;
+      padding: 6px 0;
+      margin-bottom: 10px;
+      header {
+        font-size: 16px;
+        padding: 8px 16px;
+        color: #222222;
+        border-top: 1px solid #f1f1f1;
+        border-bottom: 1px solid #f1f1f1;
+        background: #efefef;
+      }
+      article {
+          .average(2, 6px);
+          margin: 10px 10px 5px;
+          section {
+              margin-bottom: 6px;
+              cursor: pointer;
+              .inside();
+              height: 100%;
+              overflow: inherit;
+              img {
+                  width: 100%;
+              }
+          }
+      }
+    }
+    .famousBook {
+        //名家书单
+        height: 170px;
+        article {
+            .average(4, 6px);
+            //margin-bottom: -50px !important;
+            
+            section{
+                text-align: center;
+                padding-top:3px;
+                img{
+                    width: 60% !important;
+                }
+                span{
+                    display: block;
+                    font-size: 12px;
+                    color: #999999;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+    .characteristic {
+        //特色人物
+        article {
+            .average(4, 3px);
+        }
+    }
+    .hotBook {
+        min-height: 170px;
+        //热门图书
+        article {
+            margin: 10px;
+            //.average(2, 8px);
+            display: -webkit-flex;
+                flex-flow: row wrap;
+                -webkit-flex-flow: row wrap;
+                align-items: stretch;
+                -webkit-align-items: stretch;
+                justify-content:center;
+                -webkit-justify-content: left;
+                /*
+                 * flex-flow的参数介绍
+                   row    ---横向（左向右）
+                   column ---竖向（上向下）
+                   wrap   ---一行显示不完的时候换行
+                */
+
+            //
+
+            section {
+                width: 47.5%;
+                padding: 2px;
+                background: #ffffff;
+                margin-bottom: 6px;
+                margin-right: 4px;
+                border-radius: 1px;
+                border: 1px solid #f5efef;
+                box-shadow: 1px 1px 2px 1px #f5f5f5; 
+                -webkit-box-shadow:1px 1px 2px 1px #f5f5f5; 
+                &:nth-child(even){
+                  margin-right: 0;
+                }
+                .inside();
+                span,
+                label {
+                    display: block;
+                    margin: 8px;
+                    font-size: 13px;
+                }
+                label {
+                    margin: -6px 8px 12px;
+                    font-size: 12px;
+                    color: #999999;   
+                }
+                div {
+                    height: 40px;
+                    line-height: 36px;
+                    border-top: 1px solid #e8e8e8;
+                    .average(2, 12px);
+                    i {
+                        display: block;
+                        font-size: 22px;
+                        &:first-child {
+                            text-align: left;
+                            margin-left: 12px;
+                        }
+                        &:last-child {
+                            text-align: right;
+                            margin-right: 12px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //分类
+    .typeStage{
+      background: #ffffff;
+        article {
+            display: -webkit-flex;
+            flex-flow: row wrap;
+            -webkit-flex-flow: row wrap;
+            align-items: stretch;
+            -webkit-align-items: stretch;
+            justify-content:center;
+            -webkit-justify-content: center;
+            padding: 0 0 16px;
+            width: 96%;
+            margin: 10px auto;
+            section{
+                text-align: center;
+                width: calc(100%/4);
+                cursor: pointer;
+                padding: 8px 0 0;
+                text-align: center;
+                img{
+                    width:80%;
+                }
+                span{
+                    display: block;
+                    font-size: 12px;
+                    color: #999999;
+                }
+            }
+        }
+
+    }
+    .weui-cell:last-child {
+        border-bottom: 1px solid #f5ecec;
+    }
+    .red {
+        color: red;
+    }
+    .vux-slider > .vux-swiper > .vux-swiper-item > a > .vux-img{
+        background-size: 100% 100%;
+    }
+}
