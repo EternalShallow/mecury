@@ -112,6 +112,7 @@ export default {
     parabola,
     Spinner
   },
+
   created() {
     this.getList();
     document.body.style.backgroundColor = "#ffffff";
